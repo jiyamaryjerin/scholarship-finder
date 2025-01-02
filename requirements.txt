@@ -6,3 +6,4 @@ langchain_ollama==0.2.2
 langchain_text_splitters==0.3.4
 streamlit==1.40.2
 tiktoken==0.8.0
+pymupdf
