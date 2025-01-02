@@ -170,7 +170,7 @@ with st.popover("Frequently Asked Questions"):
     
 
 def generate_response(input_text):
-    model = ChatOllama(model="llama3.2", base_url="http://localhost:11434/")
+    model = ChatOllama(model="llama3.2", base_url="https://llama3-2-6fy2.onrender.com")
 
     response = model.invoke(input_text)
 
