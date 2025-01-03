@@ -98,7 +98,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.prompts import ChatPromptTemplate
 
 from langchain_ollama import ChatOllama
-model = ChatOllama(model="llama3.2", base_url="https://llama3-2-6fy2.onrender.com")
+model = ChatOllama(model="llama3.2", base_url="http://nomic-embed-text:8001")
 prompt = hub.pull("rlm/rag-prompt")
 prompt = """
     You are an assistant for question-answering tasks. Use the following pieces of retrieved context to answer the question.
@@ -134,7 +134,7 @@ def generate_response(input_text):
     | model
     | StrOutputParser()
     )
-    model = ChatOllama(model="llama3.2", base_url="https://llama3-2-6fy2.onrender.com")
+    model = ChatOllama(model="llama3.2", base_url="http://llama32:8002")
 
     response = model.invoke(input_text)
 
@@ -170,7 +170,7 @@ with st.popover("Frequently Asked Questions"):
     
 
 def generate_response(input_text):
-    model = ChatOllama(model="llama3.2", base_url="https://llama3-2-6fy2.onrender.com")
+    model = ChatOllama(model="llama3.2", base_url="http://llama32:8002")
 
     response = model.invoke(input_text)
 
